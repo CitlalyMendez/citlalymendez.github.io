@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rápidos y Furiosos</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mood" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .izquierda {
+            width: 50%;
+            text-align: left;
+        }
+        .derecha {
+            width: 50%;
+            text-align: center;
+        }
+        .poster {
+            width: 150px;
+            max-width: 450px;
+        }
+        .protagonistas {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .personaje {
+            border: 1px solid #000;
+            padding: 10px;
+            width: 90%;
+        }
+        .boton-trailer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            display: inline-block;
+        }
+        .trailer {
+            display: none;
+            margin-top: 20px;
+        }
+        .info {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .info div {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="izquierda">
+        <h1 id="titulo">Rápidos y Furiosos</h1>
+        <h2 clss="descripcion">Brian O'Conner, un policía encubierto, se infiltra en las carreras
+             callejeras para atrapar a un grupo de ladrones, pero acaba ganándose la confianza de Dominic Toretto y cuestionando su lealtad . </h2>
+       
+        <img class="poster" src="descarga.jpeg" alt="Cartel de Rápidos y Furiosos">
+        
+        
+        <div class="protagonistas">
+            <div class="personaje">
+                <h3>Dominic Toretto</h3>
+                <p>Líder del equipo y apasionado de los autos.</p>
+            </div>
+            <div class="personaje">
+                <h3>Brian O'Conner</h3>
+                <p>Ex policía y corredor de autos.</p>
+            </div>
+            <div class="personaje">
+                <h3>Letty Ortiz</h3>
+                <p>Habilidosa corredora y pareja de Dominic.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="derecha">
+        <h2>Calificación IMDB: 7.5 
+            <span class="material-symbols-outlined">
+                mood
+                </span>
+        </h2>
+       
+        <div>
+            <h3>Ver tráiler</h3>
+            <button class="boton-trailer" onclick="mostrarTrailer()">Ver</button>
+            <div class="trailer" id="trailer">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/2TAOizOnNPo" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="info">
+            <table border="1px">
+                <tr>
+                <th>Pais</th>
+                <th>Titulo</th>
+                </tr>
+                <tr>
+                <td>Mexico</td>
+                <td>Rapido y furioso</td>
+                </tr>
+                <tr>
+                <td>España</td>
+                <td>A todo gas</td>
+                </tr>
+                <tr>
+                <td>USA</td>
+                <td>The Fast and the Furious</td>
+                </tr>
+               </table>
+ 
+
+
+
+
+    </div>
+
+    <script>
+        function mostrarTrailer() {
+            document.getElementById("trailer").style.display = "block";
+        }
+    </script>
+</body>
+</html>
